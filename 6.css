@@ -1,0 +1,433 @@
+
+.page
+{
+      width: 1200px;
+      height: 600px;
+      margin: 50px auto;
+      background-image: url(./Imgs/mec.jpg);
+      background-size: cover;
+
+      position: relative;
+}
+
+.inside-page
+{
+      width: 1000px;
+      height: 500px;
+      background-color: #3fe983;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: grid;
+      grid-template-columns: 35% 65%;
+      grid-template-rows: auto;
+      grid-template-areas: "side chat";
+}
+
+.side
+{
+      background-color: #eee;
+      margin: 20px;
+      grid-area: side;
+      display: grid;
+      grid-template-columns: auto;
+      /*grid-template-rows: repeat(8, 1fr);*/
+      grid-template-rows: 11% 7% 82%;
+      position: relative;
+      box-shadow: 0px 0px 7px 2px #3f3d3d;
+}
+
+
+.title
+{
+      grid-row: 1/2;
+      background-color: #d2efd2;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.title > p
+{
+      font-size: 22px;
+      position: absolute;
+      top: -13px;
+      left: 3px;
+      box-shadow: 0px 1px 0px 1px #50a967;
+}
+
+.write{
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      background-color: #44a25c;
+      position: absolute;
+      right: 3px;
+      top: 5px;
+}
+.write::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      border: 2px solid #FFF;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+
+.write::after{
+      content: "/";
+      width: 8px;
+      height: 9px;
+      font-size: 17px;
+      color: white;
+      background-color: #44a25c;
+      position: absolute;
+      top: 17%;
+      right: 15%;
+      transform: rotate(32deg);
+}
+
+.search
+{
+      grid-row: 2 / 3;
+      position: relative;
+}
+.search input
+{
+      width: 98%;
+      height: 28px;
+      border: 1px solid #009f00;
+      background-color: #d2efd2;
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+}
+
+.chats
+{
+      grid-row: 3/4;
+
+      display: grid;
+      margin-top: 10px;
+      grid-template-rows: repeat(6, 1fr);
+}
+
+.one
+{
+      grid-row: 1 / 2;
+}
+
+.two
+{
+      grid-row: 2 / 3;
+}
+
+.three
+{
+      grid-row: 3 / 4;
+}
+
+.four
+{
+      grid-row: 4 / 5;
+}
+
+.five
+{
+      grid-row: 5 / 6;
+}
+
+.six
+{
+      grid-row: 6 / 7;
+}
+
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six
+{
+      display: flex;
+      position: relative;
+      margin: 3px;
+      background-color: #d2efd2;
+      border-radius: 6px;
+      box-shadow: 0px 1px 0px 1px #c6b5b5;
+}
+.one .image,
+.two .image,
+.three .image,
+.four .image,
+.five .image,
+.six .image
+{
+      width: 45px;
+      height: 45px;
+
+      background-size: cover;
+      border-radius: 50%;
+      transform: translate(4px, 4px);
+}
+.one .image
+{
+      background-image: url(./img/one.jpg);
+}
+.two .image
+{
+      background-image: url(./img/two.jpg);
+}
+.three .image
+{
+      background-image: url(./img/three.jpg);
+}
+
+.four .image
+{
+      background-image: url(./img/four.jpg);
+}
+.five .image
+{
+      background-image: url(./img/five.jpeg);
+}
+.six .image
+{
+      background-image: url(./img/six.jpg);
+}
+
+
+.one p,
+.two p,
+.three p,
+.four p,
+.five p,
+.six p
+{
+      position: absolute;
+      top: -19px;
+      left: 20%;
+      font-size: 18px;
+}
+
+.one .time,
+.two .time,
+.three .time,
+.four .time,
+.five .time,
+.six .time
+{
+      font-size: 13px;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      opacity: 0.5;
+}
+
+.one .read,
+.two .read,
+.three .read,
+.four .read,
+.five .read,
+.six .read
+{
+      position: relative;
+}
+
+
+.one .message,
+.two .message,
+.three .message,
+.four .message,
+.five .message,
+.six .message
+{
+      position: absolute;
+      bottom: 3px;
+      right: 14%;
+      font-size: 16px;
+}
+/************************************************************************************/
+
+
+.chatting
+{
+      grid-area: chat;
+      background-color: #efe;
+      margin : 20px 7px 20px 0px;
+      display: grid;
+      grid-template-rows: 13% 78% 13% ;
+      grid-template-areas: "top"
+                           "mid"
+                           "end";
+      position: relative;
+      box-shadow: 0px 0px 7px 2px #3f3d3d;
+}
+
+.top
+{
+      /*grid-row: 1 / 2;*/
+      grid-area: top;
+      position: relative;
+}
+.self
+{
+      padding: 3px;
+      background-color: #d2efd2;
+      position: relative;
+}
+.self p
+{
+      
+      position: absolute;
+      top: -13px;
+      left: 10%;
+}
+.self .image
+{
+      width: 50px;
+      height: 50px;
+      background-image: url(./img/one.jpg);
+      background-size: cover;
+      border-radius: 50%;
+}
+.self-message
+{
+      position: absolute;
+      bottom: 4px;
+      left: 67px;
+      opacity: 0.5;
+}
+
+.check
+{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top: 15px;
+      right: 5px;
+}
+
+.check::before
+{
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #009bff;
+      position: absolute;
+      top: 37%;
+      right: -11%;
+      transform: translate(-50%, -50%);
+}
+
+.check::after{
+      content: "/";
+      width: 9px;
+      height: 10px;
+      font-size: 17px;
+      /* background-color: #44a25c; */
+      color: #009bff;
+      position: absolute;
+      bottom: 26%;
+      right: 37%;
+      transform: rotate(32deg);
+}
+
+/**************************************************************************************/
+
+.messaging
+{
+      grid-area: mid;
+
+      background-image: url(./Img/back.jpg);
+      box-shadow: 0px 0px 7px 1px #afaeae;
+
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      position: relative;
+}
+.messaging::after
+{
+      content: "";
+      width: 90%;
+      height: 3px;
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      transform: translate(-50%, -50%);
+}
+
+.messaging .cover
+{
+      grid-area: 2 / 4 / 4 / 8;
+      background-color: #baf8ba;
+      position: relative;
+      box-shadow: 0 0 4px 2px #7c7c7c;
+      border-radius: 6px;
+}
+
+.cover::before
+{
+      content: "";
+      width: 95%;
+      height: 95%;
+      background-image: url(./img/clho.jpg);
+      background-size: cover;
+      border-radius: 6px;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+.cover::after
+{
+      content: "10:30 AM";
+      position: absolute;
+      bottom: 0%;
+      right: -2%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      font-size: 10px;
+      color: #3939ef;
+}
+
+
+.messaging .message
+{
+      grid-area: 4 / 2 / 7 / 8;
+      margin: 5px 0px;
+      background-color: #baf8ba;
+      color: black;
+      border-radius: 7px;
+      position: relative;
+      box-shadow: 0 0 4px 2px #7c7c7c;
+}
+
+.messaging .message pre
+{
+      position: absolute;
+      font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+
